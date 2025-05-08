@@ -23,13 +23,3 @@ jobs:
 
       - name: 构建项目
         run: npm run build
-
-      - name: 部署到服务器
-        uses: appleboy/scp-action@v0.1.6
-        with:
-          host: 8.154.20.183
-          username: root
-          password: Cyp123456789
-          port: 22
-          source: 'dist/*'
-          target: '/var/www/html'
